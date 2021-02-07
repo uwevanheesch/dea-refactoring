@@ -1,9 +1,10 @@
 package nl.han.dea;
 
+import nl.han.dea.supermarket.Supermarket;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SupermarketTest {
 
@@ -16,22 +17,26 @@ class SupermarketTest {
 
     @Test
     void productIsAddedToBasket() {
-        sut.addToBasket("apple", 1, 2);
-        sut.addToBasket("potatoe", 1, 1);
-        assertEquals(2, sut.basket.get("apple:1"));
-        assertEquals(1, sut.basket.get("potatoe:1"));
-        assertEquals(2, sut.basket.size());
+        sut.addToBasket(Supermarket.APPLE_HONEYCRISP, 2);
+        sut.addToBasket(Supermarket.POTATOE_LAURA, 1);
     }
 
     @Test
     void payCalculatesPriceCorrectly() {
         //arrange (test fixture)
-        sut.addToBasket("apple", 1, 2);
-        sut.addToBasket("potatoe", 2, 1);
-        sut.addToBasket("tomatoe", 1, 10);
+        sut.addToBasket(Supermarket.APPLE_HONEYCRISP, 2);
+        sut.addToBasket(Supermarket.POTATOE_LAURA, 1);
+        sut.addToBasket(Supermarket.TOMATOE_BIGBEEF, 10);
         // act
         var actualAmount = sut.pay();
         // assert
         assertEquals(3.11, actualAmount, 0.009);
+    }
+
+    @Test
+    void payCalculatesPricesForDuplicateProducts() {
+        sut.addToBasket(Supermarket.APPLE_HONEYCRISP, 1);
+        sut.addToBasket(Supermarket.APPLE_HONEYCRISP, 1);
+        assertEquals(0.46, sut.pay());
     }
 }
