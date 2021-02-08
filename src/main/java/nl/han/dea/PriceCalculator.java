@@ -2,16 +2,16 @@ package nl.han.dea;
 
 public class PriceCalculator {
 
-    public double calculatePriceForTomatoes(int type, int quantity) {
-        if (type == 1) { // Big Beef Tomato 0,23 Euro/piece
+    public double calculatePriceForTomatoes(int Type, int quantity) {
+        if (Type == 1) { // Big Beef Tomato 0,23 Euro/piece
             var price = quantity * 0.23;
             return price;
         }
-        if (type == 2) { // Cherry tomatoes 0,12 Euro/piece
+        if (Type == 2) { // Cherry tomatoes 0,12 Euro/piece
             var price = quantity * 0.14;
             return price;
         }
-        if (type == 4) {
+        if (Type == 4) {
             var price = quantity * 0.23;
             return price;
         }
