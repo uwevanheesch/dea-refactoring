@@ -12,12 +12,13 @@ public class Supermarket {
     }
 
     public double pay() {
-        PriceCalculator priceCalculator = new PriceCalculator();
+        var priceCalculator = new PriceCalculator();
         double price = 0;
         for (String item : basket.keySet()) {
             var product = item.split(":")[0];
             var type = Integer.parseInt(item.split(":")[1]);
             var amount = basket.get(item);
+            // check prices for different sub-types of products
             if (product.equals("tomato")) {
                 price += priceCalculator.calculatePriceForTomatoes(type, amount);
             } else if (product.equals("potato")) {

@@ -20,7 +20,6 @@ public class PriceCalculator {
 
     public double calculatePriceForApples(int type, int quantity) {
         if (type == 1) { // Sweet Tango
-
             return quantity * 0.35;
         }
         if (type == 2) { // McIntosh
