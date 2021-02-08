@@ -18,9 +18,9 @@ public class Supermarket {
             var product = item.split(":")[0];
             var type = Integer.parseInt(item.split(":")[1]);
             var amount = basket.get(item);
-            if (product.equals("tomatoe")) {
+            if (product.equals("tomato")) {
                 price += priceCalculator.calculatePriceForTomatoes(type, amount);
-            } else if (product.equals("potatoe")) {
+            } else if (product.equals("potato")) {
                 price += priceCalculator.calculatePriceForPotatoes(type, amount);
             } else if (product.equals("apple")) {
                 price += priceCalculator.calculatePriceForApples(type, amount);

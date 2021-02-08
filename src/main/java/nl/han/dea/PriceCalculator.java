@@ -3,7 +3,7 @@ package nl.han.dea;
 public class PriceCalculator {
 
     public double calculatePriceForTomatoes(int type, int quantity) {
-        if (type == 1) { // Big Beef Tomatoe 0,23 Euro/piece
+        if (type == 1) { // Big Beef Tomato 0,23 Euro/piece
             return quantity * 0.23;
         }
         if (type == 2) { // Cherry tomatoes 0,12 Euro/piece

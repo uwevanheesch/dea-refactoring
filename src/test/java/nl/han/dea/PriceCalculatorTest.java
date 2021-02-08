@@ -15,24 +15,24 @@ class PriceCalculatorTest {
     }
 
     @Test
-    void unkownTomatoePriceIsCalculatedCorrectly() {
+    void unkownTomatoPriceIsCalculatedCorrectly() {
         assertEquals(-1, sut.calculatePriceForTomatoes(42, 4));
     }
 
     @Test
-    void beefTomatoePriceIsCalculatedCorrectly() {
+    void beefTomatoPriceIsCalculatedCorrectly() {
         assertEquals(0.92, sut.calculatePriceForTomatoes(1, 4));
         assertEquals(0.46, sut.calculatePriceForTomatoes(1, 2));
     }
 
     @Test
-    void cherryTomatoePriceIsCalculatedCorrectly() {
+    void cherryTomatoPriceIsCalculatedCorrectly() {
         assertEquals(0.56, sut.calculatePriceForTomatoes(2, 4));
         assertEquals(0.28, sut.calculatePriceForTomatoes(2, 2));
     }
 
     @Test
-    void rispTomatoePriceIsCalculatedCorrectly() {
+    void rispTomatoPriceIsCalculatedCorrectly() {
         assertEquals(0.92, sut.calculatePriceForTomatoes(4, 4));
         assertEquals(0.46, sut.calculatePriceForTomatoes(4, 2));
     }
@@ -61,24 +61,24 @@ class PriceCalculatorTest {
     }
 
     @Test
-    void unkownPotatoePriceIsCalculatedCorrectly() {
+    void unkownPotatoPriceIsCalculatedCorrectly() {
         assertEquals(-1, sut.calculatePriceForPotatoes(42, 4));
     }
 
     @Test
-    void lauraPotatoePriceIsCalculatedCorrectly() {
+    void lauraPotatoPriceIsCalculatedCorrectly() {
         assertEquals(1.4, sut.calculatePriceForPotatoes(1, 4));
         assertEquals(0.7, sut.calculatePriceForPotatoes(1, 2));
     }
 
     @Test
-    void nicolaPotatoePriceIsCalculatedCorrectly() {
+    void nicolaPotatoPriceIsCalculatedCorrectly() {
         assertEquals(0.44, sut.calculatePriceForPotatoes(2, 4));
         assertEquals(0.22, sut.calculatePriceForPotatoes(2, 2));
     }
 
     @Test
-    void tajfunPotatoePriceIsCalculatedCorrectly() {
+    void tajfunPotatoPriceIsCalculatedCorrectly() {
         assertEquals(0.92, sut.calculatePriceForPotatoes(3, 4));
         assertEquals(0.46, sut.calculatePriceForPotatoes(3, 2));
     }

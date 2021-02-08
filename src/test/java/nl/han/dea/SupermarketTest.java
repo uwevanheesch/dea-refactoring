@@ -17,9 +17,9 @@ class SupermarketTest {
     @Test
     void productIsAddedToBasket() {
         sut.addToBasket("apple", 1, 2);
-        sut.addToBasket("potatoe", 1, 1);
+        sut.addToBasket("potato", 1, 1);
         assertEquals(2, sut.basket.get("apple:1"));
-        assertEquals(1, sut.basket.get("potatoe:1"));
+        assertEquals(1, sut.basket.get("potato:1"));
         assertEquals(2, sut.basket.size());
     }
 
@@ -27,8 +27,8 @@ class SupermarketTest {
     void payCalculatesPriceCorrectly() {
         //arrange (test fixture)
         sut.addToBasket("apple", 1, 2);
-        sut.addToBasket("potatoe", 2, 1);
-        sut.addToBasket("tomatoe", 1, 10);
+        sut.addToBasket("potato", 2, 1);
+        sut.addToBasket("tomato", 1, 10);
         // act
         var actualAmount = sut.pay();
         // assert
