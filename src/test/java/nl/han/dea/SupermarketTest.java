@@ -18,15 +18,15 @@ class SupermarketTest {
     @Test
     void productIsAddedToBasket() {
         sut.addToBasket(Supermarket.APPLE_HONEYCRISP, 2);
-        sut.addToBasket(Supermarket.POTATOE_LAURA, 1);
+        sut.addToBasket(Supermarket.POTATO_LAURA, 1);
     }
 
     @Test
     void payCalculatesPriceCorrectly() {
         //arrange (test fixture)
         sut.addToBasket(Supermarket.APPLE_HONEYCRISP, 2);
-        sut.addToBasket(Supermarket.POTATOE_LAURA, 1);
-        sut.addToBasket(Supermarket.TOMATOE_BIGBEEF, 10);
+        sut.addToBasket(Supermarket.POTATO_LAURA, 1);
+        sut.addToBasket(Supermarket.TOMATO_BIGBEEF, 10);
         // act
         var actualAmount = sut.pay();
         // assert
